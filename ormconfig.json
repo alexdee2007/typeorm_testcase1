@@ -1,24 +1,14 @@
 {
-   "type": "postgres",
-   "host": "localhost",
-   "port": 55432,
-   "username": "test",
-   "password": "test",
-   "database": "test",
-   "synchronize": true,
-   "logging": false,
-   "entities": [
-      "src/entity/**/*.ts"
-   ],
-   "migrations": [
-      "src/migration/**/*.ts"
-   ],
-   "subscribers": [
-      "src/subscriber/**/*.ts"
-   ],
-   "cli": {
-      "entitiesDir": "src/entity",
-      "migrationsDir": "src/migration",
-      "subscribersDir": "src/subscriber"
-   }
+  "type": "oracle",
+  "connectString": "101.8.1.239/orcl",
+  "username": "ers",
+  "password": "ers",
+  "synchronize": false,
+  "logging": false,
+  "entities": ["src/entity/**/*.ts"],
+  "extra": {
+    "poolMin": 4,
+    "poolMax": 64,
+    "poolIncrement": 1
+  }
 }
